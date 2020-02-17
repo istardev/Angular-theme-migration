@@ -1,0 +1,13 @@
+<div *ngIf="navConfig">
+  <app-header-layout [navConfig]="navConfig"></app-header-layout>
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav fxHide.gt-sm>
+      <app-side-navbar (sidenavClose)="sidenav.close()"></app-side-navbar>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer-layout></app-footer-layout>
+  <div></div>
+</div>

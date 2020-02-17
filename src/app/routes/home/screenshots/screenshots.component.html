@@ -1,0 +1,61 @@
+<section id="screenshots" class="bg-white">
+  <div fxLayout="column" class="content-container" fxLayoutAlign="space-between center">
+    <h2 class="section-title" fadeScrollAnimate>{{ header1 }}</h2>
+    <div class="divider"></div>
+    <p class="text-center lh-175 lead" fadeScrollAnimate>
+      {{ subHeader1 }}<br />
+      {{ subHeader2 }}
+    </p>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div
+      [fxFlex]="100 / 6"
+      class="position-relative"
+      (click)="openImgViewer(image)"
+      *ngFor="let image of images; let first = first; let last = last; let index = index"
+      [ngClass]="{ 'mr-2': first, 'ml-2': last, 'mx-2': !first && !last }"
+    >
+      <img class="w-100 h-100" [src]="image?.src" fadeScrollAnimate [delay]="index * 140" />
+      <div class="img-overlay w-100 h-100">
+        <div class="h-100 w-100 d-table">
+          <div class="w-100 figure-caption">
+            <i class="fa fa-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutAlign="space-between"
+    class="content-container"
+    style="padding-bottom: 0px"
+  >
+    <div
+      fxFlex="50"
+      fxFlex.xs="100"
+      fxFlex.gt-xs="70"
+      fxFlex.md="70"
+      fxLayoutAlign="flex-end flex-end"
+      fxLayoutAlign.xs="center"
+    >
+      <img style="height: 70vh;" [src]="phoneImg" moveScrollAnimate [offset]="500" />
+    </div>
+    <div fxLayoutAlign="center">
+      <div fxLayout="column" fxLayoutAlign="center" style="height: 70vh; padding-top: 5vh">
+        <h2 fadeScrollAnimate>{{ header2 }}</h2>
+        <div class="divider"></div>
+        <p class="lh-175 lead" fadeScrollAnimate>
+          {{ description }}<strong>{{ boldText }}</strong>
+        </p>
+        <ul class="skills-list">
+          <li *ngFor="let skill of skills">
+            <p class="lead" fadeScrollAnimate><i class="fa fa-check"></i>{{ skill }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

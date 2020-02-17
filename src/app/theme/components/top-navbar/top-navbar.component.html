@@ -1,0 +1,57 @@
+<div class="navbar" [class.bg-white-animate]="isTop" fxFlexAlign="center">
+  <div class="bg-navbar" [class.fade-in]="isTop" [class.fade-out]="isTop == false"></div>
+  <div class="container" fxLayoutAlign="center">
+    <mat-toolbar style="min-height:100px">
+      <button mat-icon-button (click)="onToggleSidenav()" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a
+        [routerLink]="['/']"
+        [class.scale-down-center]="isTop"
+        [class.scale-up-center]="isTop == false"
+        class="underscore-none"
+      >
+        <h1 class="nav-brand">
+          <div fxLayout="row" fxLayoutAlign="space-around center">
+            <img src="/assets/images/logo.png" height="100px" style="margin-right: 10px;" />
+            LAMBDA
+          </div>
+        </h1>
+      </a>
+      <div fxFlex fxLayout fxLayoutAlign="end">
+        <div fxHide.lt-md>
+          <div fxFlex *ngFor="let menu of navConfig.menus" fxLayoutAlign="space-around center">
+            <a
+              [class.active]="activeRouter?.htmlId == menu.htmlId"
+              *ngIf="!menu.isRound"
+              mat-button
+              class="text-uppercase mx-2"
+              (click)="onScroll(menu.htmlId)"
+              >{{ menu.label }}</a
+            >
+            <a
+              [class.active]="activeRouter?.htmlId == menu.htmlId"
+              *ngIf="menu.isRound"
+              mat-stroked-button
+              class="text-uppercase mx-2"
+              class="custom-mat-stroked-button rounded"
+              (click)="onScroll(menu.htmlId)"
+            >
+              <mat-icon fontSet="fas" [fontIcon]="menu.icon"></mat-icon>
+              {{ menu.label }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>
+<button
+  mat-fab
+  color="primary"
+  class="scroll-top"
+  *ngIf="showScrollTop"
+  (click)="onScroll('about')"
+>
+  <mat-icon fontSet="fas" fontIcon="fa-chevron-up"></mat-icon>
+</button>

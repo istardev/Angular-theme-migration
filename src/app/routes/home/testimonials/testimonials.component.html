@@ -1,0 +1,40 @@
+<section id="testimonials" style="background-color: rgba(240,240,240,1);" class="content-container">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let slide of quotes">
+      <div fxLayout="column">
+        <div fxLayoutAlign="center center">
+          <div
+            fxFlex="60"
+            fxFlex.fxShow.lt-sm="100"
+            fxLayout="row"
+            fxLayoutAlign="space-around center"
+          >
+            <div fxLayoutAlign="start" class="position-relative">
+              <blockquote fadeScrollAnimate class="text-center lead" style="min-width: 40vw;">
+                {{ slide.quote }}
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div
+          fxFlex
+          fxLayoutAlign="center center"
+          fxLayout="column"
+          fadeScrollAnimate
+          style="margin-top: 10px"
+        >
+          <img
+            width="100"
+            height="100"
+            class="rounded-circle"
+            style="width: 100px !important;"
+            [src]="slide.avatar"
+          />
+          <div style="margin: 30px 0">
+            {{ slide.author }}
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</section>

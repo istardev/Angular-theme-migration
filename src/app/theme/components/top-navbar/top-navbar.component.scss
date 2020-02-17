@@ -1,0 +1,90 @@
+@import 'src/styles/core/breakpoints.scss';
+
+.nav-brand {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.navbar {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+
+  a {
+    color: white;
+
+    @include smobile() {
+      font-size: 13px;
+    }
+
+    @include xl() {
+      font-size: 18px;
+    }
+
+    &.active {
+      color: #72b4b6 !important;
+    }
+  }
+
+  &.bg-white-animate a {
+    color: #4c4c4c !important;
+
+    &.active {
+      color: #72b4b6 !important;
+    }
+  }
+
+  &.bg-white-animate .custom-mat-stroked-button {
+    border-color: #4c4c4c;
+
+    &.active {
+      border-color: #72b4b6 !important;
+    }
+  }
+
+  .custom-mat-stroked-button {
+    border-color: white;
+    padding: 5px 20px 3px 20px;
+  }
+
+  .mat-toolbar {
+    @include md() {
+      width: 750px;
+    }
+
+    @include lg() {
+      width: 970px;
+    }
+
+    @include xxl() {
+      width: 76%;
+    }
+
+    @include xxxl() {
+      width: 70%;
+    }
+  }
+}
+
+.bg-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, .9);
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+  &.fade-out {
+    opacity: 0;
+  }
+}
+
+.underscore-none {
+  text-decoration: none;
+}

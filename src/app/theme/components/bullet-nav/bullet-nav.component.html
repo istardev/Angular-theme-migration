@@ -1,0 +1,7 @@
+<div class="bullet-nav" style="top: 50vh">
+  <ul>
+    <li *ngFor="let route of ids">
+      <a (click)="onScroll(route.htmlId)" [class.active]="activeRouter.htmlId == route.htmlId"></a>
+    </li>
+  </ul>
+</div>

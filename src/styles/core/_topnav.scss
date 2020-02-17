@@ -1,0 +1,27 @@
+// ==================================================
+// TOPNAV
+// ==================================================
+
+@mixin brahma-topnav-theme($theme) {
+  $background: mat-color($theme, 'background');
+  $foreground: mat-color($theme, 'foreground');
+
+  .brahma-topmenu {
+    background: mat-color($background, app-bar);
+    color: mat-color($foreground, text);
+  }
+}
+
+.scroll-top {
+  position: fixed !important;
+  z-index: 100;
+  bottom: 10px;
+  right: 30px;
+  height: 35px !important;
+  width: 35px !important;
+
+  span {
+    padding: 9px 1px !important;
+    line-height: 2 !important;
+  }
+}

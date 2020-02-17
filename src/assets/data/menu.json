@@ -1,0 +1,23 @@
+{
+  "menu": [{
+    "id": "about",
+    "value": 0
+  }, {
+    "id": "features",
+    "value": 0
+  }, {
+    "id": "design",
+    "value": 0
+  }, {
+    "id": "screenshots",
+    "value": 0
+  }, {
+    "id": "testimonials",
+    "value": 0
+  }, {
+    "id": "get-it",
+    "text": "GET IT",
+    "value": 0,
+    "icon": "fa-shopping-cart"
+  }]
+}

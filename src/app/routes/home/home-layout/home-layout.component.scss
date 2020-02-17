@@ -1,0 +1,137 @@
+@import 'src/styles/core/breakpoints.scss';
+
+.background-media {
+  background-image: url(http://lambda.oxygenna.com/landing/wp-content/uploads/sites/10/2014/11/app-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: no-scroll;
+  background-position: 50% 0%;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 110vh;
+  left: 0;
+  top: 0;
+}
+
+.about-container {
+  @include smobile() {
+    height: 120vh;
+  }
+
+  @include md() {
+    height: 110vh;
+  }
+}
+
+.about-phone {
+  @include smobile() {
+    padding-top: 0;
+  }
+
+  @include xl() {
+    padding-top: 15vh;
+  }
+
+  .phone-img {
+    @include smobile() {
+      height: 75vh;
+      padding-top: 5vh;
+    }
+
+    @include xl() {
+      height: 100vh;
+    }
+  }
+}
+
+.feature-icon {
+  border-radius: 50%;
+}
+
+.figure-caption {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.d-table {
+  display: table;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0 !important;
+
+  i {
+    color: #72b4b6;
+    padding-right: 5px;
+  }
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 26px;
+  line-height: 45px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.about-content {
+  @include smobile() {
+    text-align: center;
+    padding-top: 20vh;
+    width: 100%;
+  }
+
+  @include xl() {
+    text-align: inherit;
+    padding-top: 10vh;
+    width: inherit;
+  }
+}
+
+.content-container {
+  @include smobile() {
+    padding: 20px;
+  }
+
+  @include xl() {
+    padding: 60px;
+  }
+
+  margin-top: -1px;
+}
+
+.design-image {
+  @include smobile() {
+    height: 15vh;
+  }
+
+  @include xl() {
+    height: 50vh;
+  }
+}
+
+#get-it {
+  @include smobile() {
+    min-height: 120vh;
+    padding: 20px;
+  }
+
+  //   @include md() {
+  //     min-height: 70vh;
+  //     padding: 20px;
+  //   }
+
+  @include md() {
+    min-height: 70vh;
+    padding: 60px;
+  }
+}

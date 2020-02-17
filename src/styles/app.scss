@@ -1,0 +1,52 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+//
+// Light style
+//
+
+$mat-light-red: (50: #ffebee,
+  100: rgba(87, 166, 168, 0.1),
+  200: rgba(87, 166, 168, 0.2),
+  300: rgba(87, 166, 168, 0.3),
+  400: rgba(87, 166, 168, 0.4),
+  500: rgba(87, 166, 168, 0.7),
+  600: rgba(87, 166, 168, 0.7),
+  700: rgba(87, 166, 168, 0.7),
+  800:rgba(87, 166, 168, 0.8),
+  900: rgba(87, 166, 168, 0.9),
+  A100: rgba(87, 166, 168, 1),
+  A200: rgba(76, 143, 145),
+  A400:rgb(48, 93, 94),
+  A700: rgba(45, 86, 87),
+  contrast: (50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  ));
+
+$primary: mat-palette($mat-light-red);
+$accent: mat-palette($mat-pink, a200, a100, a400);
+$theme: mat-light-theme($primary, $accent);
+
+$config: mat-typography-config();
+
+@include angular-material-theme($theme);
+
+//
+// Theme
+//
+@import 'theming';
+
+@include brahma-theme($theme);
