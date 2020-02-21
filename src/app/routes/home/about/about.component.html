@@ -1,6 +1,6 @@
 <section id="about">
   <div class=" about-container" fxLayout="row" fxLayout.xs="column">
-    <div class="background-media" [style.transform]="'translateY(' + scrollTop + 'px)'"></div>
+    <div class="background-media" appParallax [ratio]="-0.8" [style.transform]="'translateY(' + scrollTop + 'px)'"></div>
     <div
       fxFlex="60"
       fxFlex.xs="100"
@@ -17,28 +17,7 @@
           {{ subHeader1 }}<br />
           {{ subHeader2 }}
         </h3>
-        <button
-          mat-raised-button
-          color="white"
-          class="rounded"
-          style="font-size: 20px;"
-          fadeScrollAnimate
-          [offset]="10000"
-        >
-          {{ iphone }}
-          <mat-icon fontSet="fab" fontIcon="fa-apple"></mat-icon>
-        </button>
-        <button
-          mat-raised-button
-          class="rounded mx-4 text-white"
-          color="primary"
-          fadeScrollAnimate
-          [offset]="10000"
-          style="font-size: 20px;"
-        >
-          {{ android }}
-          <mat-icon fontSet="fab" fontIcon="fa-android"></mat-icon>
-        </button>
+        <app-buttons [firstBtn]="iphone" [secondBtn]="android"></app-buttons>
       </div>
     </div>
     <div

@@ -12,7 +12,7 @@ export class GetItComponent implements OnInit {
   subHeader2 = GetItContent.subHeader2;
   iphone = GetItContent.iphone;
   android = GetItContent.android;
-
+  socialData = GetItContent.socialData;
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,7 +1,7 @@
 <section id="screenshots" class="bg-white">
   <div fxLayout="column" class="content-container" fxLayoutAlign="space-between center">
     <h2 class="section-title" fadeScrollAnimate>{{ header1 }}</h2>
-    <div class="divider"></div>
+    <div class="divider mt-20 mb-20"></div>
     <p class="text-center lh-175 lead" fadeScrollAnimate>
       {{ subHeader1 }}<br />
       {{ subHeader2 }}
@@ -15,23 +15,16 @@
       *ngFor="let image of images; let first = first; let last = last; let index = index"
       [ngClass]="{ 'mr-2': first, 'ml-2': last, 'mx-2': !first && !last }"
     >
-      <img class="w-100 h-100" [src]="image?.src" fadeScrollAnimate [delay]="index * 140" />
-      <div class="img-overlay w-100 h-100">
-        <div class="h-100 w-100 d-table">
-          <div class="w-100 figure-caption">
-            <i class="fa fa-plus"></i>
-          </div>
-        </div>
-      </div>
+      <app-screenshot [imageSrc]="image?.src" [index]="index"></app-screenshot> 
     </div>
   </div>
 
   <div
     fxLayout="row"
+    fxLayout.sm="column"
     fxLayout.xs="column"
     fxLayoutAlign="space-between"
-    class="content-container"
-    style="padding-bottom: 0px"
+    class="content-container best-app-wrap"
   >
     <div
       fxFlex="50"
@@ -39,15 +32,15 @@
       fxFlex.gt-xs="70"
       fxFlex.md="70"
       fxLayoutAlign="flex-end flex-end"
-      fxLayoutAlign.xs="center"
+      fxLayoutAlign.sm="center"
     >
-      <img style="height: 70vh;" [src]="phoneImg" moveScrollAnimate [offset]="500" />
+      <img [src]="phoneImg" moveScrollAnimate [offset]="500" />
     </div>
     <div fxLayoutAlign="center">
-      <div fxLayout="column" fxLayoutAlign="center" style="height: 70vh; padding-top: 5vh">
+      <div fxLayout="column" class="text-wrap" fxLayoutAlign="center">
         <h2 fadeScrollAnimate>{{ header2 }}</h2>
-        <div class="divider"></div>
-        <p class="lh-175 lead" fadeScrollAnimate>
+        <div class="divider mt-20"></div>
+        <p class="lh-175 lead mt-20" fadeScrollAnimate>
           {{ description }}<strong>{{ boldText }}</strong>
         </p>
         <ul class="skills-list">

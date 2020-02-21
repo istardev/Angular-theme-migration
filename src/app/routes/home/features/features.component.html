@@ -1,92 +1,23 @@
-<section id="features" style="overflow: hidden;">
+<section id="features">
   <div class="content bg-white content-container">
     <div fxLayout="column" fxLayoutAlign="space-between center">
       <h2 moveScrollAnimate>{{ header }}</h2>
-      <div style="height: 4px; width: 40px; background: #72b4b6"></div>
-      <p class="text-center lh-175 lead" fadeScrollAnimate>
+      <div class="divider mt-20 mb-20"></div>
+      <p class="text-center lh-175 lead mb-20" fadeScrollAnimate>
         {{ subHeader1 }}<br />
         {{ subHeader2 }}
       </p>
     </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center">
+    <div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="space-around center">
       <div fxFlex="5"></div>
       <div fxFlex="30" fxLayout="column" fxLayoutAlign="center">
-        <div
-          fxLayout="row"
-          fxLayoutAlign="space-round"
-          class="feature-item"
-          style="padding-bottom: 30px"
-          moveScrollLeftAnimate
-        >
-          <div
-            fxFlex="19"
-            fxFlex.xs="20"
-            fxFlex.md="30"
-            class="feature-icon"
-            style="background-color:#72b4b6; width: 72px; height: 72px"
-          ></div>
-          <div fxFlex="4"></div>
-          <div>
-            <h3 class="mt-0">{{ featureHeader1 }}</h3>
-            <p class="lead">
-              {{ featureDescription1 }}
-            </p>
-          </div>
-        </div>
-
-        <div fxLayout="row" fxLayoutAlign="space-round" class="feature-item" moveScrollLeftAnimate>
-          <div
-            fxFlex="19"
-            fxFlex.xs="20"
-            fxFlex.md="30"
-            class="feature-icon"
-            style="background-color:#72b4b6; height: 72px"
-          ></div>
-          <div fxFlex="4"></div>
-          <div>
-            <h3 class="mt-0">{{ featureHeader2 }}</h3>
-            <p class="lead">{{ featureDescription2 }}</p>
-          </div>
-        </div>
+        <app-feauture-item *ngFor="let item of leftColContent" [item]="item" ></app-feauture-item>
       </div>
       <div>
         <img [src]="phoneImg" moveScrollAnimate [offset]="400" />
       </div>
       <div fxFlex="30" fxLayout="column" fxLayoutAlign="center">
-        <div
-          fxLayout="row"
-          fxLayoutAlign="space-round"
-          class="feature-item"
-          style="padding-bottom: 30px"
-          moveScrollRightAnimate
-        >
-          <div>
-            <h3 class="mt-0">{{ featureHeader3 }}</h3>
-            <p class="lead">{{ featureDescription3 }}</p>
-          </div>
-          <div fxFlex="4"></div>
-          <div
-            fxFlex="19"
-            fxFlex.xs="20"
-            fxFlex.md="30"
-            class="feature-icon"
-            style="background-color:#72b4b6; width: 72px; height: 72px"
-          ></div>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-round" class="feature-item" moveScrollRightAnimate>
-          <div>
-            <h3 class="mt-0">{{ featureHeader4 }}</h3>
-            <p class="lead">{{ featureDescription4 }}</p>
-          </div>
-          <div fxFlex="4"></div>
-          <div
-            fxFlex="19"
-            fxFlex.xs="20"
-            fxFlex.md="30"
-            class="feature-icon"
-            style="background-color:#72b4b6; width: 72px; height: 72px"
-          ></div>
-        </div>
+        <app-feauture-item *ngFor="let item of rightColContent" [item]="item" [isReverse]="true"></app-feauture-item>
       </div>
       <div fxFlex="5"></div>
     </div>

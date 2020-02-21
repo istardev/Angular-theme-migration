@@ -1,11 +1,10 @@
-<section id="get-it" style="background-color: transparent;">
+<section id="get-it">
   <div fxLayout="column" fxLayoutAlign="space-between center">
     <h1 class="text-white" fadeScrollAnimate>{{ header }}</h1>
 
-    <div style="height: 4px; width: 40px; background: #72b4b6; margin-top: 10px;"></div>
+    <div class="divider mt-20"></div>
     <h2
       class="text-white light text-center lead"
-      style="padding: 10px 0px; font-size: 35px; margin-top: 1rem; line-height: 3rem;"
       fadeScrollAnimate
     >
       {{ subHeader1 }}<br />
@@ -13,25 +12,9 @@
     </h2>
 
     <div fxflex fxFlex="100%" fxFlex.gt-xs="50%" fxLayoutAlign="flex-end center">
-      <button
-        mat-raised-button
-        color="white"
-        class="rounded"
-        style="font-size: 20px;"
-        fadeScrollAnimate
-      >
-        {{ iphone }}
-        <mat-icon fontSet="fab" fontIcon="fa-apple"></mat-icon>
-      </button>
-      <button
-        mat-raised-button
-        class="rounded mx-4 text-white"
-        fadeScrollAnimate
-        style="background: rgba(87, 166, 168, 0.78);font-size: 20px;"
-      >
-        {{ android }}
-        <mat-icon fontSet="fab" fontIcon="fa-android"></mat-icon>
-      </button>
+      <app-buttons [firstBtn]="iphone" [secondBtn]="android"></app-buttons>
     </div>
+    <app-social [social]="socialData"></app-social>
   </div>
+  <div class="bg-footer"></div>
 </section>

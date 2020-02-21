@@ -10,9 +10,16 @@ import { FadeScrollAnimateDirective } from './directives/animation/fade-scroll-a
 import { MoveScrollAnimateDirective } from './directives/animation/move-scroll-animate.directive';
 import { MoveScrollRightAnimateDirective } from './directives/animation/move-scroll-right-animate.directive';
 import { MoveScrollLeftAnimateDirective } from './directives/animation/move-scroll-left-animate.directive';
+import { ParallaxDirective } from './directives/parallax/parallax.directive';
+
+import { ScreenshotComponent } from './components/screenshot/screenshot.component';
+import { FeautureItemComponent } from './components/feauture-item/feauture-item.component';
+import { SocialComponent } from './components/social/social.component';
+import { ButtonsComponent } from './components/buttons/buttons.component';
+
 
 const THIRD_MODULES = [MaterialModule, FlexLayoutModule, CarouselModule];
-const COMPONENTS = [ImageViewerComponent];
+const COMPONENTS = [ImageViewerComponent, ScreenshotComponent, FeautureItemComponent, ButtonsComponent, SocialComponent];
 const COMPONENTS_DYNAMIC = [];
 const DIRECTIVES = [
   // animation
@@ -20,6 +27,7 @@ const DIRECTIVES = [
   MoveScrollAnimateDirective,
   MoveScrollRightAnimateDirective,
   MoveScrollLeftAnimateDirective,
+  ParallaxDirective
 ];
 const PIPES = [];
 

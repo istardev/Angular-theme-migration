@@ -31,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
       useFactory: (sessionService: SessionService) => sessionService.locale,
     },
     { provide: APP_CONFIG, useValue: AppConfig },
-    { provide: ROUTES_CONFIG, useValue: RoutesConfig },
+    { provide: ROUTES_CONFIG, useValue: RoutesConfig }
   ],
   bootstrap: [AppComponent],
 })

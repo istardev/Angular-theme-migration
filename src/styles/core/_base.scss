@@ -18,7 +18,7 @@ body {
 html,
 body {
   height: 100%;
-  background-image: url(http://lambda.oxygenna.com/landing/wp-content/uploads/sites/10/2014/11/app-01.jpg);
+  // background-image: url(http://lambda.oxygenna.com/landing/wp-content/uploads/sites/10/2014/11/app-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: no-scroll;
@@ -55,7 +55,7 @@ body {
 
 .about-container {
   @include smobile() {
-    height: 120vh;
+    height: 172vh;
   }
 
   @include md() {
@@ -83,7 +83,24 @@ body {
     }
   }
 }
-
+#screenshots {
+  .best-app-wrap {
+    .text-wrap {
+      @include smobile() {
+        height: 100% !important;
+      }
+    }
+  }
+  
+}
+#get-it {
+  .btn {
+    @include smobile() {
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+}
 .feature-icon {
   border-radius: 50%;
 }
@@ -125,7 +142,7 @@ blockquote {
 .about-content {
   @include smobile() {
     text-align: center;
-    padding-top: 20vh;
+    padding-top: 28vh;
     width: 100%;
   }
 
@@ -133,6 +150,18 @@ blockquote {
     text-align: inherit;
     padding-top: 10vh;
     width: inherit;
+  }
+  h1 {
+    @include smobile() {
+      font-size: 40px !important;
+    }
+  }
+  h3 {
+    @include smobile() {
+      font-size: 32px !important;
+      line-height: 1.2em;
+    }
+    
   }
 }
 
@@ -162,11 +191,6 @@ blockquote {
     min-height: 120vh;
     padding: 20px;
   }
-
-//   @include md() {
-//     min-height: 70vh;
-//     padding: 20px;
-//   }
 
   @include md() {
     min-height: 70vh;

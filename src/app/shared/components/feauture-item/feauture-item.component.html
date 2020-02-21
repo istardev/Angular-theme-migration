@@ -1,0 +1,15 @@
+<div 
+  fxLayout="row" 
+  fxLayoutAlign="space-round"
+  fxLayoutAlign.sm="start"
+  class="feature-item" 
+  [class.reverse]="isReverse"
+  moveScrollLeftAnimate
+>
+    <div class="feature-icon"></div>
+    <div fxFlex="4"></div>
+    <div>
+      <h3 class="mt-0">{{ item.header }}</h3>
+      <p class="lead">{{ item.desc }}</p>
+    </div>
+</div>

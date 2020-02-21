@@ -11,17 +11,31 @@ export class FeaturesComponent implements OnInit {
   header = FeatureContent.header;
   subHeader1 = FeatureContent.subHeader1;
   subHeader2 = FeatureContent.subHeader2;
-
-  featureHeader1 = FeatureContent.featureHeader1;
-  featureDescription1 = FeatureContent.featureDescription1;
-  featureHeader2 = FeatureContent.featureHeader2;
-  featureDescription2 = FeatureContent.featureDescription2;
-  featureHeader3 = FeatureContent.featureHeader3;
-  featureDescription3 = FeatureContent.featureDescription3;
-  featureHeader4 = FeatureContent.featureHeader4;
-  featureDescription4 = FeatureContent.featureDescription4;
+  leftColContent = [
+    {
+      header: FeatureContent.featureHeader1,
+      desc: FeatureContent.featureDescription1
+    },
+    {
+      header: FeatureContent.featureHeader2,
+      desc: FeatureContent.featureDescription2
+    }
+  ];
+ 
+  rightColContent = [
+    {
+      header: FeatureContent.featureHeader3,
+      desc: FeatureContent.featureDescription3
+    },
+    {
+      header: FeatureContent.featureHeader4,
+      desc: FeatureContent.featureDescription4
+    }
+  ];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 }

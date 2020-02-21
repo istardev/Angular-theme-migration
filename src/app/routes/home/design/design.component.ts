@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DesignContent } from './design.content';
-
 @Component({
   selector: 'app-design',
   templateUrl: './design.component.html',

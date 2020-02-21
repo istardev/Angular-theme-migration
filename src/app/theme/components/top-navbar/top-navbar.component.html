@@ -2,9 +2,7 @@
   <div class="bg-navbar" [class.fade-in]="isTop" [class.fade-out]="isTop == false"></div>
   <div class="container" fxLayoutAlign="center">
     <mat-toolbar style="min-height:100px">
-      <button mat-icon-button (click)="onToggleSidenav()" fxHide.gt-sm>
-        <mat-icon>menu</mat-icon>
-      </button>
+      
       <a
         [routerLink]="['/']"
         [class.scale-down-center]="isTop"
@@ -43,6 +41,20 @@
           </div>
         </div>
       </div>
+      <button class="navbar-toggle" [class.open]="showNav" mat-icon-button (click)="showNav=!showNav" fxHide.gt-sm>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="mobile-menu" *ngIf="showNav">
+        <ul>
+          <li  *ngFor="let item of menus">
+            <a [class.active]="activeRouter?.htmlId == item.htmlId" (click)="onScroll(item.htmlId)" >
+              <mat-icon *ngIf="item.icon" fontSet="fas" [fontIcon]="item.icon"></mat-icon>{{ item.label }}</a>
+          </li>
+        </ul>
+      </div>
+        
     </mat-toolbar>
   </div>
 </div>

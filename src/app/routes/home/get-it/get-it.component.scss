@@ -1,0 +1,22 @@
+#get-it {
+  background-color: transparent;
+
+  h2 {
+    padding: 10px 0px;
+    font-size: 35px;
+    margin-top: 1rem;
+    line-height: 3rem;
+  }
+  
+  .bg-footer {
+    background-image: url(http://lambda.oxygenna.com/landing/wp-content/uploads/sites/10/2014/11/app-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    z-index: -2;
+    left: 0;
+  }
+} 

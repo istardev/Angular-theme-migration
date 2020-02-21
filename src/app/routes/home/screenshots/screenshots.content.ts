@@ -30,7 +30,7 @@ export const ScreenshotContent = {
   header1: 'SCREENSHOTS',
   subHeader1: 'We worked hard to make a product that will stand out from the crowd.',
   subHeader2: 'Take a look at some of these cool features that makes Lambda so unique.',
-  header2: 'SCREENSHOTS',
+  header2: 'BEST APP, EVER',
   description:
     'Lambda is the world’s most advanced theme. Built with incredible new capabilities and features designed to make the most out of your creativity. As with all of our products you’ll get ',
   boldText: '100% solid support.',

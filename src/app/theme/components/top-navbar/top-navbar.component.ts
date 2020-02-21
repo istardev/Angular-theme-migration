@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NavConfig } from '@shared/interfaces/navConfig';
 import { ShareService } from '@shared/services/share.service';
-
+import { menus } from '../../../routes/home/config/menu'
 @Component({
   selector: 'app-top-navbar',
   templateUrl: './top-navbar.component.html',
@@ -14,6 +14,11 @@ export class TopNavbarComponent implements OnInit {
   activeRouter;
   showScrollTop;
   menu$;
+  showNav = false;
+  menus=menus;
+  menu={
+    isRound: true
+  }
   @Output() public sidenavToggle = new EventEmitter();
 
   constructor(private shareService: ShareService) {}
@@ -30,7 +35,7 @@ export class TopNavbarComponent implements OnInit {
   }
 
   public onToggleSidenav = () => {
-    this.sidenavToggle.emit();
+    this.showNav = true;
   };
 
   onScroll(id) {
@@ -42,5 +47,6 @@ export class TopNavbarComponent implements OnInit {
         inline: id === 'screenshots' ? 'start' : 'center',
       });
     }, 100);
+    this.showNav = false;
   }
 }

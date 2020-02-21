@@ -15,7 +15,7 @@ const COMPONENTS = [
   FooterLayoutComponent,
   BulletNavComponent,
   SideNavbarComponent,
-  TopNavbarComponent,
+  TopNavbarComponent
 ];
 const COMPONENTS_DYNAMIC = [];
 

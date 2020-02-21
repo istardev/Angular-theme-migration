@@ -1,0 +1,9 @@
+<div id="social" class="social-wrap">
+    <ul class="social-icons">
+        <li *ngFor="let item of social">
+            <a [href]="item.url" target="_blank" >
+                <mat-icon [fontSet]="item.fontSet" [fontIcon]="item.fontIcon"></mat-icon>
+            </a>
+        </li>
+    </ul>
+</div>

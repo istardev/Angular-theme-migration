@@ -1,0 +1,17 @@
+.feature-item {
+    padding-bottom: 30px;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: stretch flex-start;
+    align-items: stretch;
+    &.reverse {
+        flex-direction: row-reverse !important;
+    }
+    .feature-icon {
+        background-color: #72b4b6;
+        height: 72px;
+        max-width: 72px;
+        width: 100%;
+    }
+}
