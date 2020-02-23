@@ -38,21 +38,23 @@ export class AnimateDirective implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     const ratio = this.getRatio(window.screen.width);
     this.screenHeight = window.screen.height * ratio + this.offset;
-    this.scrollEvent$ = this.shareService.offsetTop.subscribe(() => {
+    this.offsetTop = this.element.nativeElement.getBoundingClientRect().top;
+    this.scrollEvent$ = this.shareService.offsetTop.subscribe((top) => {
       // this.element.nativeElement.innerHTML = this.element.nativeElement.getBoundingClientRect().top - this.screenHeight;
       // this.element.nativeElement.innerHTML = ratio;
       if (this.delay) {
         setTimeout(() => {
-          this.updateClass();
+          this.updateClass(top);
         }, this.delay);
       } else {
-        this.updateClass();
+        this.updateClass(top);
       }
     });
   }
 
-  updateClass() {
-    if (this.element.nativeElement.getBoundingClientRect().top - this.screenHeight < 0) {
+  updateClass(top) {
+    const offsetTop = this.offsetTop - (top || 0);
+    if (offsetTop - this.screenHeight < 0) {
       this.element.nativeElement.classList.add(this.animationInClass);
       this.element.nativeElement.classList.remove(this.animationOutClass);
     } else {
